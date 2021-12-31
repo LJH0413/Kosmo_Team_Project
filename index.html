@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>우리 오늘 뭐해?</title>
-    <meta name="description" content="Cafe Ottimo" />
+    <meta name="description" content="date" />
     <meta name="author" content="LJH" />
     <link rel="icon" type="images/png" href="images/coffee-solid.png" />
     <script
@@ -20,11 +20,11 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
-    <script src="jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/jquery-3.2.1.min.js"></script>
   </head>
-
+  
   <body>
     <!-- Navbar -->
     <nav id="navbar">
@@ -92,115 +92,105 @@
 
     <!-- MENU -->
     <section id="menu" class="section">
-      <!-- <div class="section__container"> -->
-      <h1>어디로 데이트 가시나요?</h1>
-      <h2 id="text_menu" style="color: lightgray">
-        지역을 검색하거나 목록에서 직접 선택해주세요
-      </h2>
-
-      <div id="search">
-        <input class="search" type="text" placeholder="" />
-        <button><i class="fas fa-search"></i></button>
+      <div class="section__container">
+        <h1>어디로 데이트 가시나요?</h1>
+        <h2 id="text_menu" style="color: lightgray">
+          지역을 검색하거나 목록에서 직접 선택해주세요
+        </h2>
+  
+        <div id="search">
+          <input class="search" type="text" placeholder="" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+  
+        <div class="course__wrapper">
+          <div class="course__img">
+            <img class="c__img" src="image/course/gangnam.jpg" alt="desert" />
+            <h2 class="c__description">강남</h2>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/gunggu.jpg" alt="desert" />
+              <h2 class="c__description">종로</h2>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/hongdae.jpg" alt="desert" />
+              <h2 class="c__description">홍대</h2>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/hannam.png" alt="desert" />
+              <h2 class="c__description">한남동</h2>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/itaewon.jpg" alt="desert" />
+              <h2 class="c__description">이태원</h2>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/sungsu.JPG" alt="desert" />
+            <h2 class="c__description">성수동</h2>
+          </div>
       </div>
-
-      <div class="course__wrapper">
-        <div class="course__img">
-          <img class="c__img" src="image/course/gangnam.jpg" alt="desert" />
-          <h2 class="c__description">강남</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/gunggu.jpg" alt="desert" />
-            <h2 class="c__description">종로</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/hongdae.jpg" alt="desert" />
-            <h2 class="c__description">홍대</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/hannam.png" alt="desert" />
-            <h2 class="c__description">한남동</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/itaewon.jpg" alt="desert" />
-            <h2 class="c__description">이태원</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/sungsu.JPG" alt="desert" />
-          <h2 class="c__description">성수동</h2>
-        </div>
-      <!-- </div> -->
     </section>
 
     <section id="recommend" class="section">
-      <h1>추천 데이트 장소</h1>
-      <h2 id="text_menu" style="color: lightgray">
-        서울 데이트 추천
-      </h2>
-      <div class="slideshow-container">
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides fade">
-        <img src="image/recommend/art.jpg" style="width: 80%"/>
-        <div class="numbertext">서울아트센터</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="image/recommend/ddp.jpg" style="width: 80%"/>
-        <div class="numbertext">DDP</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="image/recommend/forest.jpg" style="width: 80%"/>
-        <div class="numbertext">경의선 숲길</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="image/recommend/insa.jpg" style="width: 80%"/>
-        <div class="numbertext">인사동</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="image/recommend/meusium.jpg" style="width: 80%"/>
-        <div class="numbertext">서울시립박물관</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="image/recommend/namsan.jpg" style="width: 80%"/>
-        <div class="numbertext">남산</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img src="image/recommend/plant.jpg" style="width: 80%"/>
-        <div class="numbertext">서울 식물원</div>
-      </div>
-      
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+      <div class="section__container">
+        <br>
+        <h1>추천 데이트 장소</h1>
+        <h2 id="text_menu" style="color: lightgray">
+          서울 데이트 추천
+        </h2>
+  
+        
+        <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img class="imgs" src="image/recommend/1.png" style="width: 80%"/>
+            <img class="imgs" src="image/recommend/2.png" style="width: 80%"/>
+        </div>
+  
+        <div class="mySlides fade">
+          <img class="imgs" src="image/recommend/4.png" style="width: 80%"/>
+          <img class="imgs" src="image/recommend/3.png" style="width: 80%"/>
+        </div>
+  
+        <div class="mySlides fade">
+          <img class="imgs" src="image/recommend/6.png" style="width: 80%"/>
+          <img class="imgs" src="image/recommend/7.png" style="width: 80%"/>
+        </div>
+  
+        <div class="mySlides fade">
+          <img class="imgs" src="image/recommend/8.png" style="width: 80%"/>
+          <img class="imgs" src="image/recommend/9.png" style="width: 80%"/>
+        </div>
+        
+        </div>
       </div>
     </section>
 
     <section id="review" class="section">
-      <h1>데이트 장소 리뷰</h1>
-      <div class="course__wrapper">
-        <div class="course__img">
-          <img class="c__img" src="image/course/gangnam.jpg" alt="desert" />
-          <h2 class="c__description">리뷰</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/gunggu.jpg" alt="desert" />
+      <div class="section__container">
+        <br>
+        <h1>데이트 장소 리뷰</h1>
+        <div class="course__wrapper">
+          <div class="course__img">
+            <img class="c__img" src="image/course/gangnam.jpg" alt="desert" />
             <h2 class="c__description">리뷰</h2>
-        </div>
-
-        <div class="course__img">
-          <img class="c__img" src="image/course/hongdae.jpg" alt="desert" />
-            <h2 class="c__description">리뷰</h2>
-        </div>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/gunggu.jpg" alt="desert" />
+              <h2 class="c__description">리뷰</h2>
+          </div>
+  
+          <div class="course__img">
+            <img class="c__img" src="image/course/hongdae.jpg" alt="desert" />
+              <h2 class="c__description">리뷰</h2>
+          </div>
+      </div>
     </section>
 
     
@@ -231,6 +221,6 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="slide.js"></script>
+    <script src="javascript/slide.js"></script>
   </body>
 </html>

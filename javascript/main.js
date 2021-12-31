@@ -11,11 +11,13 @@ const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
   const link = target.dataset.link;
+
+  console.log(link);
   if (link == null) {
     return;
   }
   navbarMenu.classList.remove("open");
-  scrollIntoView(link);
+  navbarMenu.scrollIntoView(link);
 });
 
 //make home slowly fade to transperent as the window scrolls down
@@ -53,40 +55,6 @@ document.addEventListener("scroll", () => {
 arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
-
-//Projects
-const projectContainer = document.querySelector(".ottimo__desert");
-const projects = document.querySelectorAll(".desert");
-workBtnContainer.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-
-  //Remove Selection from the previuse item and select new item
-  const active = document.querySelector(".desert__btn.selected");
-  active.classList.remove("selected");
-  const target =
-    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
-  target.classList.add("selected");
-
-  projects.forEach((desert) => {
-    if (filter === "*" || filter === desert.dataset.type) {
-      desert.classList.remove("invisible");
-    } else {
-      desert.classList.add("invisible");
-    }
-  });
-  projectContainer.classList.add("anim-out");
-  setTimeout(() => {
-    projectContainer.classList.remove("anim-out");
-  }, 300);
-});
-
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
 
 //1.모든 섹션 요소들을 가지고 온다
 //2. intersectionobserver를 이용 모든 섹션들을 관찰

@@ -161,7 +161,7 @@ p {
 
 /* Home */
 #home {
-  background: url("image/main_background.jpg");
+  background: url("/image/mainbackground.jpg");
   background-repeat: no-repeat;
   background-position: left;
   /* background-attachment: fixed; */
@@ -189,21 +189,6 @@ p {
   width: 250px;
   height: 70px;
   cursor: pointer;
-}
-
-.home__contact {
-  color: var(--color-black);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-black);
-  border-radius: 4px;
-}
-
-.home__contact:hover {
-  background-color: var(--color-yellow);
-  color: black;
 }
 
 /* step */
@@ -288,13 +273,12 @@ p {
 .slideshow-container {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: space-between;
   text-align: center;
 }
 
-.numbertext {
-  position: relative;
-  text-align: center;
+.imgs {
+  padding: 20px 20px;
 }
 
 /* Contact */

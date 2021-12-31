@@ -40,5 +40,5 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
 
-  slides[n].style.display = "block";
+  slides[n].style.display = "flex";
 }
