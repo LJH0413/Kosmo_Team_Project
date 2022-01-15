@@ -1,0 +1,3 @@
+- com.wdt.model : VO(value Object) 패키지입니다. 데이터 타입을 저장합니다.
+- com.wdt.mapper : DAO(Data Access Object) 역할을 하는 패키지입니다. 데이터베이스 접속하는 역할을 합니다.
+- com.wdt.service :  Service 패키지입니다. Mapper와 Controller 사이를 연결해주는 역할입니다.
