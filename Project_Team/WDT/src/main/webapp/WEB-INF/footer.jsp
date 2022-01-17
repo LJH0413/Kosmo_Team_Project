@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <link rel="stylesheet" href="resources/css/nav.css">
     
  <!-- Contact -->
+ <center>
     <section id="contact" class="section">
       <div class="section__container">
         <h3 class="contact__tittle">오늘 우리 뭐해?</h3>
@@ -11,10 +11,10 @@
         <h3 class="contact__address">서울특별시 금천구 가산동</h3>
         <div class="contact__links">
           <a href="#" target="blank" style="color: black">
-            <i class="fab fa-facebook-square"></i>
+          <img src="resources/images/icon/instagram-brands.svg" style="width: 3vh; height: 3vh">
           </a>
           <a href="#" target="blank" style="color: black">
-            <i class="fab fa-instagram"></i>
+             <img src="resources/images/icon/facebook-square-brands.svg" style="width: 3vh; height: 3vh">
           </a>
         </div>
 
@@ -23,3 +23,4 @@
         </p>
       </div>
     </section>
+    </center>

@@ -1,5 +1,7 @@
 package com.wdt.controller;
 
+//메인화면을 출력시켜주는 컨트롤러
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -18,5 +20,21 @@ public class IndexController {
 		
 		return "index";
 	}
+	
+	//회원가입 페이지 이동
+		@RequestMapping(value = "/join", method = RequestMethod.GET)
+		public String joinGET() {
+			logger.info("회원가입 페이지 진입");
+			
+			return "join";
+		}
+
+		//로그인 페이지 이동
+		@RequestMapping(value = "/login", method = RequestMethod.GET)
+		public String loginGET() {
+			logger.info("로그인 페이지 진입");
+			
+			return "login";
+		}
 
 }

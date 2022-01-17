@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.join_wrapper {
+	margin: 25vh auto;
+	width: 100vh;
+}
+
+.join_title {
+	text-align: center;
+	margin: 15vh auto;
+	
+	width: 43vh;
+	height: 8vh;
+	color: white;
+	border-radius: 5px;
+	color: black;
+	font-size: 8vh;
+	padding-bottom: 20px;
+}
+
+.join_title span {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.join_title p {
+	padding-bottom: 20px;
+	color: grey;
+}
+
+.join_wrapper td {
+	padding: 2vh;
+	border-bottom: 1px solid lightgrey;
+}
+
+.join_submit {
+	background-color: lightskyblue;
+	width: 100%;
+	height: 5vh;
+	font-size: 3vh;
+	border: none;
+	border-radius: 5px;
+	color: white;
+}

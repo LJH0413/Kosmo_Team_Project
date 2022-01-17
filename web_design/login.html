@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login form table</title>
+    <style>
+      * {
+        margin: 0 auto;
+        padding: 0;
+      }
+      body {
+        font-family: "맑은 고딕", "돋움";
+        font-size: 12px;
+        color: 444444;
+      }
+      table {
+        border: solid 1px gray;
+        border-radius: 15px;
+        padding: 5px 10px 10px 5px;
+      }
+      th {
+        font-weight: bold;
+        font-size: large;
+        padding-bottom: 5px;
+      }
+
+      .login_wrapper {
+        padding: 20vh;
+      }
+
+      #pass {
+        padding-left: 10px;
+      }
+
+      #log_btn {
+        height: 45px;
+        width: 60px;
+        border-radius: 5px;
+      }
+
+      #other {
+        padding: 10px 0 0 45px;
+      }
+
+      #btns2 {
+        text-decoration: underline;
+        border-spacing: 1px;
+      }
+
+      #a_tag {
+        color: black;
+      }
+
+      #log_btn #a_tag {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <div class="login_wrapper">
+        <th>Member Login</th>
+
+        <tr>
+          <td id="pass">
+            ID &nbsp; &nbsp; &nbsp;
+            <input type="text" />
+          </td>
+          <td rowspan="2">
+            <button id="log_btn">
+              <a href="#" id="a_tag"> 로그인</a>
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td id="pass">
+            PW &nbsp; &nbsp;
+            <input type="password" />
+          </td>
+        </tr>
+
+        <td id="other">
+          <span id="btns2">
+            <a href="#" id="a_tag"> 회원가입 </a>
+          </span>
+          &nbsp; &nbsp; &nbsp;
+          <span id="btns2">
+            <a href="#" id="a_tag"> 아이디/비밀번호 찾기 </a></span
+          >
+        </td>
+      </div>
+    </table>
+  </body>
+</html>
