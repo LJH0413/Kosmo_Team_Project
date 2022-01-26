@@ -4,78 +4,208 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>우리 오늘 모해?</title>
     <link rel="stylesheet" href="css/join.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   </head>
   <body>
     <div class="join_wrapper">
       <div class="join_title">
-        <span>우리 오늘 모해?</span>
-        <p>데이트 코스 추천 사이트</p>
+        <span>SIGN UP</span>
+        <p>데이트 코스 추천 사이트 - 우리 오늘 모해?</p>
       </div>
-      <form action="#">
+      <form id="join_form" method="POST">
         <table>
-          <tr>
-            <td>이메일:</td>
-            <td>
-              <input type="text" style="width: 100px" /> @
-              <select>
-                <option>선택</option>
-                <option>naver.com</option>
-                <option>google.com</option>
-                <option>kakao.com</option>
-                <option>daum.net</option>
-                <option>nate.com</option>
-              </select>
+          <tr style="padding-bottom: 0">
+            <td style="border-bottom: none">이메일</td>
+            <td style="border-bottom: none">
+              <input type="text" class="id_input" name="M_Email" />
+            </td>
+          </tr>
+
+          <tr height="15px">
+            <td colspan="2" style="padding: 0">
+              <span class="id_input_re_1" style="display: none; font-size: 10px"
+                >사용 가능한 아이디입니다.</span
+              >
+              <span class="id_input_re_2" style="display: none; font-size: 10px"
+                >아이디가 이미 존재합니다.</span
+              >
             </td>
           </tr>
 
           <tr>
-            <td>비밀번호:</td>
-            <td><input type="password" /></td>
-          </tr>
-
-          <tr>
-            <td>비밀번호 확인:</td>
-            <td><input type="password" /></td>
-          </tr>
-
-          <tr>
-            <td>이름:</td>
-            <td><input type="text" /></td>
-          </tr>
-
-          <tr>
-            <td>성별:</td>
+            <td>비밀번호</td>
             <td>
-              <input type="radio" name="info" checked /> 남성
-              <input type="radio" name="info" /> 여성
+              <input id="pw" class="pw_input" type="password" name="M_PW" />
             </td>
           </tr>
 
           <tr>
-            <td>전화번호:</td>
+            <td>비밀번호 확인</td>
             <td>
-              <select>
-                <option>010</option>
-                <option>011</option>
-                <option>012</option>
-                <option>019</option>
-              </select>
-              - <input type="text" style="width: 60px" /> -
-              <input type="text" style="width: 60px" />
+              <input
+                id="pwck"
+                class="pwck_input"
+                type="password"
+                onchange="passConfirm()"
+              />
             </td>
           </tr>
+
           <tr>
-            <td
-              colspan="2"
-              style="text-align: center; width: 100%; border-bottom: none"
-            >
-              <input class="join_submit" type="submit" value="회원 가입" />
+            <td>이름</td>
+            <td><input class="name_input" type="text" name="M_NAME" /></td>
+          </tr>
+
+          <tr>
+            <td>성별</td>
+            <td>
+              <input type="radio" name="M_GENDER" /> 남성
+              <input type="radio" name="M_GENDER" /> 여성
+            </td>
+          </tr>
+
+          <tr>
+            <td>전화번호</td>
+            <td><input class="phone_input" type="text" name="M_PHONE" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center; border-bottom: none">
+              <input
+                class="join_button"
+                type="button"
+                value="회원 가입"
+                style="
+                  width: 100%;
+                  height: 5vh;
+                  background: lightblue;
+                  border: none;
+                  border-radius: 5px;
+                "
+              />
             </td>
           </tr>
         </table>
       </form>
     </div>
+
+    <script type="text/javascript">
+      // 홈화면 내렸을 때 메뉴 배경 변경
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 1) {
+            $("#navbar").css("background", "white");
+          } else {
+            $("#navbar").css("background", "none");
+          }
+        });
+      });
+
+      /* 회원가입 유효성검사 통과유무 변수 */
+      var emailCheck = false; //메일
+      var pwCheck = false; //비밀번호
+      var pwchCheck = false; //비밀번호 확인
+      var nameCheck = false; //이름
+      var phoneCheck = false; //전화번호
+
+      //회원가입 버튼(회원가입 기능 작동)
+      $(document).ready(function () {
+        $(".join_button").click(function () {
+          var email = $(".id_input").val();
+          var pw = $(".pw_input").val();
+          var pwck = $(".pwck_input").val();
+          var name = $(".name_input").val();
+          var phone = $(".phone_input").val();
+
+          //이메일 유효성 검사
+          if ((email = "")) {
+            alert("이메일을 확인해주세요");
+            emailCheck = false;
+          } else {
+            emailCheck = true;
+          }
+
+          //비밀번호 유효성 검사
+          if ((pw = "")) {
+            alert("비밀번호를 확인해주세요");
+            pwCheck = false;
+          } else {
+            pwCheck = true;
+          }
+
+          //비밀번호 확인 유효성 검사
+          if ((pwck = "")) {
+            alert("비밀번호 확인을 확인해주세요");
+            pwchCheck = false;
+          } else {
+            pwchCheck = true;
+          }
+
+          //이름 유효성 검사
+          if ((name = "")) {
+            alert("이름을 확인 확인해주세요");
+            nameCheck = false;
+          } else {
+            nameCheck = true;
+          }
+
+          //핸드폰 유효성 검사
+          if ((phone = "")) {
+            alert("핸드폰을 확인 확인해주세요");
+            phoneCheck = false;
+          } else {
+            phoneCheck = true;
+          }
+
+          //최종 유효성 검사
+          if (emailCheck && pwCheck && pwchCheck && nameCheck && phoneCheck) {
+            $("#join_form").attr("action", "join");
+            $("#join_form").submit();
+          }
+          return false;
+        });
+      });
+
+      //아이디 중복검사
+      $(".id_input").on("propertychange change keyup paste input", function () {
+        var M_EMAIL = $(".id_input").val(); // .id_input에 입력되는 값
+        var data = {
+          M_EMAIL: M_EMAIL,
+        }; // '컨트롤에 넘길 데이터 이름' : '데이터(.id_input에 입력되는 값)'
+
+        $.ajax({
+          type: "POST",
+          url: "memberIdChk",
+          data: data,
+          success: function (result) {
+            if (result != "fail") {
+              $(".id_input_re_1").css("display", "inline-block");
+              $(".id_input_re_2").css("display", "none");
+              emailchCheck = true;
+            } else {
+              $(".id_input_re_2").css("display", "inline-block");
+              $(".id_input_re_1").css("display", "none");
+              emailchCheck = false;
+            }
+          },
+        }); // ajax 종료
+      });
+
+      //비밀번호 중복 검사
+      function passConfirm() {
+        var pw = document.getElementById("pw").value;
+        var pwch = document.getElementById("pwck").value;
+
+        if (pw != pwch) {
+          alert("비밀번호가 일치하지 않습니다");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>

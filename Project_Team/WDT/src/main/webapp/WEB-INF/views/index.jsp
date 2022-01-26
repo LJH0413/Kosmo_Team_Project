@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <% %>@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> --%>
-<%@ page session="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -35,7 +34,16 @@
 			<li class="navbar__menu__item active" data-link="#menu">검색</li>
 			<li class="navbar__menu__item" data-link="#recommend">추천 코스</li>
 			<li class="navbar__menu__item" data-link="#review">리뷰</li>
+			<!-- 로그인하지 않은 상태 -->
+			<c:if test = "${member == null}">
 			<li class="navbar__menu__item"><a href="login">로그인</a></li>
+			</c:if>
+			
+			<!-- 로그인 한 상태 -->
+			<c:if test  = "${member != null }">
+			<li class="navbar__menu__item"><a href="login">로그아웃</a></li>
+			</c:if>
+			
 		</ul>
 		<!-- navbar toggle -->
 		<button class="navbar__toggle-btn">
@@ -49,7 +57,7 @@
 	<section id="home"
 		style="height: 800px;">
 		<div class="left">
-			<img src="resources/images/mainbackground.png">
+			<img src="resources/images/mainbackground.png" style="width: 80vh;">
 		</div>
 		<div class="right">
 			<div class="text">

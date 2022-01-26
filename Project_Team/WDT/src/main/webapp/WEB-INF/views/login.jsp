@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 <link rel="stylesheet" href="resources/css/nav.css" type="text/css">
 <link rel="stylesheet" href="resources/css/login.css" type="text/css">
 <link rel="stylesheet" href="resources/css/footer.css" type="text/css">
-<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <header>
@@ -23,14 +24,14 @@
 			<span>LOG IN</span>
 			<p>데이트 코스 추천 사이트 - 우리 오늘 모해?</p>
 		</div>
-		<form action="#">
+		<form id="Login_form" method="post">
 			<table>
 				<tr>
 					<td style="border-bottom: none">Email</td>
 				</tr>
 				
 				<tr>
-				<td><input type="text"></td>
+				<td><input class="id_input" name="M_Email" type="text"></td>
 				</tr>
 
 				<tr>
@@ -38,7 +39,7 @@
 				</tr>
 				
 				<tr>
-				<td><input type="password" /></td>
+				<td><input class="pw_input" name="M_PW" type="password" /></td>
 				</tr>
 				
 				<tr>
@@ -50,7 +51,7 @@
 				<tr>
 					<td colspan="2"
 						style="text-align: center; border-bottom: none; width:100%">
-						<input class="login_submit" type="submit" value="로그인" />
+						<input class="Login_button" type="submit" value="로그인" />
 					</td>
 				</tr>
 				
@@ -62,9 +63,7 @@
 					<td colspan="2"  class="join"> <a href="join">회원가입</a></td>
 				</tr>
 				
-				<!-- <tr>
-					<td colspan="2">소셜로그인 영역</td>
-				</tr> -->
+				
 			</table>
 		</form>
 	</div>
@@ -84,6 +83,11 @@
 	    }
 	  });
 	});
+	
+	$(".login_button").click(function(){
+		$("#login_form").attr("action", "login");
+		$("#login_form").submit();
+	})
 	</script>
 
 </body>
