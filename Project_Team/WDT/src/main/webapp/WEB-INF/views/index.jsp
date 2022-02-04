@@ -23,7 +23,6 @@
 <script src="resources/js/home_main.js" defer></script>
 <script src="resources/js/jquery-3.2.1.min.js"></script>
 </head>
-
 <body>
 	<!-- Navbar -->
 	<nav id="navbar">
@@ -41,7 +40,8 @@
 			
 			<!-- 로그인 한 상태 -->
 			<c:if test  = "${member != null }">
-			<li class="navbar__menu__item"><a href="login">로그아웃</a></li>
+			<li class="navbar__menu__item"><a href="mypage">마이페이지</a></li>
+			<li class="navbar__menu__item"><a href="logout.do">로그아웃</a></li>
 			</c:if>
 			
 		</ul>
@@ -57,7 +57,7 @@
 	<section id="home"
 		style="height: 800px;">
 		<div class="left">
-			<img src="resources/images/mainbackground.png" style="width: 80vh;">
+			<img src="resources/images/mainbackground.png" style="width: 95vh;">
 		</div>
 		<div class="right">
 			<div class="text">

@@ -4,7 +4,7 @@ public class MemberVO {
 	
 	
 	private int M_ID; //회원 아이디
-	private String M_Email; //회원 이메일
+	private String M_EMAIL; //회원 이메일
 	private String M_PW; //회원 패스워드
 	private String M_NAME; //회원 이름
 	private String M_PHONE; //회원 전화번호
@@ -18,11 +18,11 @@ public class MemberVO {
 	public void setM_ID(int m_ID) {
 		M_ID = m_ID;
 	}
-	public String getM_Email() {
-		return M_Email;
+	public String getM_EMAIL() {
+		return M_EMAIL;
 	}
-	public void setM_Email(String m_Email) {
-		M_Email = m_Email;
+	public void setM_EMAIL(String m_EMAIL) {
+		M_EMAIL = m_EMAIL;
 	}
 	public String getM_PW() {
 		return M_PW;
@@ -63,7 +63,7 @@ public class MemberVO {
 	
 	@Override
 	public String toString() {
-		return "MemberVO [memberId=" + M_ID + ", memberMail=" + M_Email + ", memberPw=" + M_PW + ", memberName=" + M_NAME
+		return "MemberVO [memberId=" + M_ID + ", memberMail=" + M_EMAIL + ", memberPw=" + M_PW + ", memberName=" + M_NAME
 			+ ", MemberPhone=" + M_PHONE + ", memberRegDate=" + M_REGDATE + ", memberGender=" + M_GENDER + "]";
 	}
 

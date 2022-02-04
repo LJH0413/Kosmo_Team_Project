@@ -46,7 +46,7 @@ public class MemberMapperTests {
 //		member.setM_Email("test");
 //		member.setM_PW("test");
 		
-		member.setM_Email("aaa");
+		member.setM_EMAIL("aaa");
 		member.setM_PW("aaa");
 		
 		membermapper.memberLogin(member);

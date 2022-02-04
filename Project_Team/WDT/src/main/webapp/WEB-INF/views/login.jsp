@@ -31,7 +31,7 @@
 				</tr>
 				
 				<tr>
-				<td><input class="id_input" name="M_Email" type="text"></td>
+				<td><input class="id_input" name="M_EMAIL" type="text"></td>
 				</tr>
 
 				<tr>
@@ -43,8 +43,9 @@
 				</tr>
 				
 				<tr>
-					<td colspan="2">개인 인증 </td>
-					
+					<c:if test= "${result == 0 }">
+						<td class="Login_warn" style="color: red;">사용자 ID 또는 비밀번호를 잘못 입력하셨습니다.</td>
+					</c:if>
 				</tr>
 				
 					

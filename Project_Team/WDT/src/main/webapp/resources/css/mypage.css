@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.my_title {
+  margin-top: 20vh;
+  margin-bottom: 6vh;
+}
+
+.mypage_menu div {
+  display: inline;
+  padding: 2vh 4vh;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.mypage_menu div:hover {
+  background-color: pink;
+  color: white;
+}
+
+.content {
+  margin: 8vh;
+  padding: 30vh 40vh;
+  border: 1px solid lightgray;
+  text-align: center;
+  color: gray;
+}

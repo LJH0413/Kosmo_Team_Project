@@ -28,7 +28,7 @@
 			<table>
 				<tr style="padding-bottom:0;">
 					<td style="border-bottom: none">이메일</td>
-					<td style="border-bottom: none"><input type="text" class="id_input" name="M_Email" /></td>
+					<td style="border-bottom: none"><input type="text" class="id_input" name="M_EMAIL" /></td>
 
 				</tr>
 

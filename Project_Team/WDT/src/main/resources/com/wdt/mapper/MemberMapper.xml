@@ -6,9 +6,8 @@
 
 	<!-- 회원 가입 -->
 	<insert id="memberJoin">
-		insert into MEMBER(M_EMAIL, M_PW, M_NAME, M_PHONE, M_REGDATE,
-		M_GENDER)
-		values(#{M_Email}, #{M_PW}, #{M_NAME}, #{M_PHONE}, now(), #{M_GENDER})
+		insert into MEMBER(M_EMAIL, M_PW, M_NAME, M_PHONE, M_REGDATE, M_GENDER)
+		values(#{M_EMAIL}, #{M_PW}, #{M_NAME}, #{M_PHONE}, now(), #{M_GENDER})
 	</insert>
 
 	<!-- 아이디 중복 검사 -->
@@ -18,7 +17,10 @@
 	
 	<!-- 로그인 구현 -->
 	<select id="memberLogin" resultType="com.wdt.model.MemberVO">
-		select M_EMAIL, M_PW from MEMBER WHERE M_EMAIL = #{M_Email} and M_PW = #{M_PW}
+		<!-- 인코딩 된 비밀번호를 확인하기 위한 쿼리 -->
+		select M_EMAIL, M_PW from MEMBER where M_EMAIL = #{M_EMAIL}
+	
+		<!-- select M_EMAIL, M_PW from MEMBER WHERE M_EMAIL = #{M_Email} and M_PW = #{M_PW} -->
 	</select>
 
 </mapper>
