@@ -22,5 +22,14 @@
 	
 		<!-- select M_EMAIL, M_PW from MEMBER WHERE M_EMAIL = #{M_Email} and M_PW = #{M_PW} -->
 	</select>
+	
+	<!-- 회원정보 수정 -->
+	<update id="memberUpdate">
+		UPDATE MEMBER SET
+			M_PW = #{M_PW},
+			M_NAME = #{M_NAME},
+			M_PHONE = #{M_PHONE}
+			WHERE M_EMAIL = #{M_EMAIL}
+	</update>
 
 </mapper>

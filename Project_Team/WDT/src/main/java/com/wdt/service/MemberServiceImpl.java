@@ -27,4 +27,9 @@ public class MemberServiceImpl implements MemberService{
 		return membermapper.memberLogin(member);
 	}
 
+	@Override
+	public void memberUpdate(MemberVO member) throws Exception {
+		membermapper.memberUpdate(member);
+	}
+
 }

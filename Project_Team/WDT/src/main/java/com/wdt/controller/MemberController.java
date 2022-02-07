@@ -125,8 +125,40 @@ public class MemberController {
 
 	//마이페이지 이동
 	@RequestMapping(value = "/mypage", method= RequestMethod.GET)
-	public void mypageGET() {
+	public void mypageGET() throws Exception{
+		
 		logger.info("마이 페이지 진입");
+		
 	}
+
+	@RequestMapping(value="/update", method = RequestMethod.GET)
+	public void registerUpdateView() throws Exception{
+		
+		logger.info("회원가입 수정 페이지 진입");
+	}
+
+	@RequestMapping(value="/update", method = RequestMethod.POST)
+	public String registerUpdate(MemberVO vo, HttpSession session) throws Exception{
+		
+		String rawPw = ""; //인코딩 전 비밀번호
+		String encodePw = ""; //인코딩 후 비밀번호
+
+		rawPw = vo.getM_PW();
+		encodePw = pwEncoder.encode(rawPw);
+		vo.setM_PW(encodePw);
+
+		
+		memberservice.memberUpdate(vo);
+		
+		session.invalidate();
+		
+		return "redirect:/index";
+	}
+
+	
+	
+
+	
+
 
 }

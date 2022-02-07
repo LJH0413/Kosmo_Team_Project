@@ -22,14 +22,15 @@
 		</div>
 
 		<div class="mypage_menu">
-			<div class="info">회원정보 수정</div>
+			<div class="info"><a href="update">회원정보 수정</a></div>
 			<div class="manage">일정 관리 / 내보내기</div>
 			<div class="review">나의 리뷰</div>
 			<div>회원 탈퇴</div>
 		</div>
 
 		<div class="content">
-			<p>우리 오늘 모해?</>
+			<p>우리 오늘 모해?</p>
+			
 		</div>
 	</center>
 

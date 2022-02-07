@@ -12,5 +12,7 @@ public interface MemberService {
 
 	//로그인 
 	public MemberVO memberLogin(MemberVO member) throws Exception;
-
+	
+	//회원정보수정
+	public void memberUpdate(MemberVO vo) throws Exception;
 }
